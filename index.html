@@ -512,6 +512,76 @@
     }
 
 
+
+
+
+
+
+
+/*video only*/
+
+/*Project One*/
+
+/* Container must hide the overlap during zoom */
+.project-image {
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+  background: #111; /* Fallback color */
+}
+
+/* Base state for videos (and images) */
+.project-image video,
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Start zoomed in at 1.2x */
+  transform: scale(1.2); 
+  transition: transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Hover state: Zoom out to original 1.0x */
+.project-card:hover .project-image video,
+.project-card:hover .project-image img {
+  transform: scale(1);
+}
+
+/*Project Two*/
+/* Container for the media */
+.project-image {
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+  background: #000; /* Black background while video loads */
+}
+
+/* Initial state for BOTH images and videos: Zoomed In */
+.project-image img,
+.project-image video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.2); /* Start zoomed in */
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* Hover state: Zoom Out to 1.0 */
+.project-card:hover .project-image img,
+.project-card:hover .project-image video {
+  transform: scale(1);
+}
+
+
+
+
+
+
+
+
+
+
+
   </style>
 
 </head>
@@ -556,25 +626,39 @@
     <h2 class="section-title">Projects</h2>
     <div class="projects-grid">
 
-      <div class="project-card">
-        <div class="project-image"><img src="https://github.com/satwikrbharadwaj/Sales_Dashboard--Excel/blob/main/Sales%20Dashboard%20Snapshot.png?raw=true" alt="Sales Dashboard"></div>
-        <div class="project-content">
-          <h3>Sales Dashboard</h3>
-          <span class="project-tag">EXCEL</span>
-          <p class="project-desc">A dynamic Excel dashboard utilizing pivot tables and slicers to track yearly sales performance and regional trends.</p>
-          <a href="https://github.com/satwikrbharadwaj/Sales_Dashboard--Excel" class="project-btn"><i class="fab fa-github"></i> Source</a>
-        </div>
-      </div>
+<div class="project-card">
+  <div class="project-image">
+    <video autoplay muted loop playsinline poster="https://github.com/satwikrbharadwaj/Sales_Dashboard--Excel/blob/main/Sales%20Dashboard%20Snapshot.png?raw=true">
+      <source src="https://github.com/satwikrbharadwaj/Sales_Dashboard--Excel/raw/refs/heads/main/Sales%20Dashboard%20Video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div class="project-content">
+    <h3>Sales Dashboard</h3>
+    <span class="project-tag">EXCEL</span>
+    <p class="project-desc">A dynamic Excel dashboard utilizing pivot tables and slicers to track yearly sales performance and regional trends.</p>
+    <a href="https://github.com/satwikrbharadwaj/Sales_Dashboard--Excel" class="project-btn"><i class="fab fa-github"></i> Source</a>
+  </div>
+</div>
       
-      <div class="project-card">
-        <div class="project-image"><img src="https://github.com/satwikrbharadwaj/Apex-Merchant-Analytics/blob/main/Apex%20Merchant%20Analytics%20Snapshot.png?raw=true"></div>
-        <div class="project-content">
-          <h3>Apex Merchant Analytics</h3>
-          <span class="project-tag">POWER BI</span>
-          <p class="project-desc">Apex Merchant Analytics is a business intelligence dashboard built to analyze and monitor e-commerce sales performance across India. The solution provides actionable insights into revenue trends, regional performance, product categories, and payment behaviors through interactive visualizations.</p>
-          <a href="https://github.com/satwikrbharadwaj/Apex-Merchant-Analytics" class="project-btn"><i class="fab fa-github"></i> Source</a>
-        </div>
-      </div>
+      
+      
+<div class="project-card">
+  <div class="project-image">
+    <video autoplay muted loop playsinline poster="https://github.com/satwikrbharadwaj/Apex-Merchant-Analytics/blob/main/Apex%20Merchant%20Analytics%20Snapshot.png?raw=true">
+      <source src="https://github.com/satwikrbharadwaj/Apex_Merchant_Analytics--PowerBI/raw/refs/heads/main/Apex%20Merchant%20Analytics%20Video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div class="project-content">
+    <h3>Apex Merchant Analytics</h3>
+    <span class="project-tag">POWER BI</span>
+    <p class="project-desc">A business intelligence dashboard built to analyze and monitor e-commerce sales performance across India. This video preview demonstrates the interactive filters and regional drill-downs.</p>
+    <a href="https://github.com/satwikrbharadwaj/Apex-Merchant-Analytics" class="project-btn"><i class="fab fa-github"></i> Source</a>
+  </div>
+</div>
+    
+    
     
 
       <div class="project-card">
