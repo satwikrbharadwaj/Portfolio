@@ -547,6 +547,9 @@
   transform: scale(1);
 }
 
+
+
+
 /*Project Two*/
 /* Container for the media */
 .project-image {
@@ -571,6 +574,37 @@
 .project-card:hover .project-image video {
   transform: scale(1);
 }
+
+
+
+
+/*Project Three*/
+/* Ensure the image/video container clips the edges */
+.project-image {
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+  background: #000;
+}
+
+/* Set initial state for videos and images to 1.2x (Zoomed In) */
+.project-image video,
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.2); 
+  transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+/* Hover state: Zoom out to 1.0x (Full View) */
+.project-card:hover .project-image video,
+.project-card:hover .project-image img {
+  transform: scale(1);
+}
+
+
+
 
 
 
@@ -641,6 +675,23 @@
   </div>
 </div>
       
+
+    
+<div class="project-card">
+  <div class="project-image">
+    <video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=800">
+      <source src="https://github.com/satwikrbharadwaj/IMDB_Movie_Dashboard--Excel/raw/refs/heads/main/IMDB%20Movie%20Dashboard%20Video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div class="project-content">
+    <h3>IMDB Movie Dashboard</h3>
+    <span class="project-tag">EXCEL</span>
+    <p class="project-desc">A comprehensive Excel-based data analysis project exploring the IMDb Movie Database. This project transforms raw movie data into actionable insights using advanced Excel features like Pivot Tables, Pivot Charts and Interactive Slicers.</p>
+    <a href="https://github.com/satwikrbharadwaj/IMDB_Movie_Dashboard--Excel" class="project-btn"><i class="fab fa-github"></i> Source</a>
+  </div>
+</div>
+
       
       
 <div class="project-card">
@@ -658,18 +709,8 @@
   </div>
 </div>
     
-    
-    
 
-      <div class="project-card">
-        <div class="project-image"><img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=800" alt="Financial Tracker"></div>
-        <div class="project-content">
-          <h3>Financial Tracker</h3>
-          <span class="project-tag">EXCEL</span>
-          <p class="project-desc">Comprehensive budget tracker featuring expense categorization, automated summaries, and visual spending charts.</p>
-          <a href="#" class="project-btn"><i class="fab fa-github"></i> Source</a>
-        </div>
-      </div>
+
 
       <div class="project-card">
         <div class="project-image"><img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&q=80&w=800" alt="E-commerce Analysis"></div>
@@ -829,5 +870,6 @@
 
 </body>
 </html>
+
 
 
